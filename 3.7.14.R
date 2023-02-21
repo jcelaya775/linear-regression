@@ -38,3 +38,4 @@ lm.fit3 = lm(y ~ x2)
 summary(lm.fit3)
 abline(lm.fit3, col = "purple", lty = 2)
 # legend(0, 6, legend = c("y ~ x1"), lty = c(3), col = c("purple"))
+

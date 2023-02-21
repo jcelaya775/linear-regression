@@ -44,6 +44,13 @@ compare.models = function(x, y, legX = -2, legY = 0) {
 data = simulate.data(n = 100, mean = 0, sd = 1)
 x = data$x
 y = data$y
+
+plot(x, y)
+lm.fit = lm(y ~ x)
+abline(lm.fit, col = "red")
+abline(-1, 0.5, col = "blue")
+legend(-2, 1, legend = c("Estimated y", "True y"), lty = c(1, 1), col = c("red", "blue"))
+
 print("Moderate noise")
 compare.models(x, y, legX = -2, legY = 0.3)
 

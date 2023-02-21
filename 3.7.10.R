@@ -1,9 +1,17 @@
-setwd("c:/repos/r/project-1")
-
-
-library(MASS)
+library(ISLR)
 attach(Carseats)
 
-# (a): Fit multiple regression model
+# Fit multiple regression model
 lm.fit = lm(Sales ~ Price + Urban + US)
 summary(lm.fit)
+
+lm.fit = lm(Sales ~ Price + US)
+summary(lm.fit)
+confint(lm.fit, level = 0.95)
+
+as.data.frame(hatvalues(lm.fit))
+
+hist(Price)
+hist(US)
+hist(lm.fit$fitted.values)
+lm.fit

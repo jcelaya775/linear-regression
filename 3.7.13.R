@@ -1,7 +1,3 @@
-# TODO: Remove these lines
-rm(list = ls())
-dev.off()
-
 set.seed(1)
 
 # Define functions
@@ -45,7 +41,7 @@ compare.models = function(x, y, legX = -2, legY = 0) {
 # ======================================================================
 
 # Compare linear regression models
-data = simulate.dta(n = 100, mean = 0, sd = 1)
+data = simulate.data(n = 100, mean = 0, sd = 1)
 x = data$x
 y = data$y
 print("Moderate noise")
